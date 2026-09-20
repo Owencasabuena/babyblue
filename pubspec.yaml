@@ -34,6 +34,9 @@ dependencies:
   # Video playback
   video_player: ^2.9.2
 
+  # Voice-to-text for journal
+  speech_to_text: ^7.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -31,5 +31,6 @@ class AppConstants {
   // ── SQLite ──────────────────────────────────────────────────────
   static const String dbName = 'babyblue.db';
   static const String moodTable = 'mood_entries';
-  static const int dbVersion = 1;
+  static const String journalTable = 'journal_entries';
+  static const int dbVersion = 2;
 }
