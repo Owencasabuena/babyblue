@@ -8,6 +8,7 @@ import 'package:babyblue/features/auth/presentation/screens/login_screen.dart';
 import 'package:babyblue/features/auth/presentation/screens/splash_screen.dart';
 import 'package:babyblue/features/journal/presentation/screens/journal_screen.dart';
 import 'package:babyblue/features/lessons/presentation/screens/lessons_screen.dart';
+import 'package:babyblue/features/lessons/presentation/screens/lesson_detail_screen.dart';
 import 'package:babyblue/features/mood_tracker/presentation/screens/mood_tracker_screen.dart';
 import 'package:babyblue/shared/widgets/main_shell.dart';
 
@@ -100,6 +101,14 @@ final routerProvider = Provider<GoRouter>((ref) {
               GoRoute(
                 path: '/lessons',
                 builder: (_, _) => const LessonsScreen(),
+                routes: [
+                  GoRoute(
+                    path: ':lessonId',
+                    builder: (_, state) => LessonDetailScreen(
+                      lessonId: state.pathParameters['lessonId']!,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

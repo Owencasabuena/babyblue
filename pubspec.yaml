@@ -31,6 +31,9 @@ dependencies:
   # Typography
   google_fonts: ^6.2.0
 
+  # Video playback
+  video_player: ^2.9.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,3 +41,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/data/
