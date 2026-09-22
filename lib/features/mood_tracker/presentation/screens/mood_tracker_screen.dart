@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:babyblue/core/theme/app_theme.dart';
 import 'package:babyblue/features/lessons/presentation/providers/suggested_lessons_provider.dart';
@@ -103,21 +104,7 @@ class MoodTrackerScreen extends ConsumerWidget {
                           return SuggestedLessonCard(
                             lesson: lessons[index],
                             onTap: () {
-                              // Stubbed — navigate to lesson detail.
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  content: Text(
-                                    '${lessons[index].emoji}  ${lessons[index].title} — coming soon!',
-                                  ),
-                                  backgroundColor: AppTheme.primaryLavender,
-                                  behavior: SnackBarBehavior.floating,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
-                                  ),
-                                  margin: const EdgeInsets.all(16),
-                                  duration: const Duration(seconds: 2),
-                                ),
-                              );
+                              context.go('/lessons/${lessons[index].id}');
                             },
                           );
                         },

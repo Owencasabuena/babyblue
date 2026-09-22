@@ -1,6 +1,6 @@
 [
   {
-    "id": "lesson-baby-blues-101",
+    "id": "understanding-baby-blues",
     "slug": "understanding-baby-blues",
     "title": "Navigating the Baby Blues: What's Normal and What's Next",
     "category": "Postpartum Wellness",
@@ -12,7 +12,7 @@
     "description": "Up to 80% of new parents experience the 'baby blues' within the first few days after birth. This gentle, expert-led lesson walks you through the physiological triggers behind sudden mood shifts — including hormonal changes, sleep deprivation, and the emotional weight of new responsibility.\n\nYou'll learn:\n• The difference between baby blues and postpartum depression\n• Key symptoms to monitor in the first two weeks\n• Gentle, practical coping strategies you can start today\n• When and how to seek professional support\n\nRemember: experiencing the baby blues does not mean you are failing. It means your body and mind are adjusting to one of life's most profound transitions."
   },
   {
-    "id": "lesson-self-care-basics",
+    "id": "gentle-self-care",
     "slug": "self-care-for-new-parents",
     "title": "Self-Care Isn't Selfish: Basics for New Parents",
     "category": "Self-Care",
@@ -24,7 +24,7 @@
     "description": "When you're caring for a newborn around the clock, taking time for yourself can feel impossible — or even guilty. But self-care is the foundation that lets you show up for your baby.\n\nThis lesson covers:\n• Micro self-care: 5-minute practices that fit between feeds\n• Building a realistic daily rhythm (not a rigid schedule)\n• Asking for help without feeling like a burden\n• Nourishing your body when cooking feels overwhelming\n\nSmall, intentional acts of care add up. You deserve gentleness too."
   },
   {
-    "id": "lesson-partner-support",
+    "id": "partner-communication",
     "slug": "supporting-your-partner",
     "title": "Supporting Your Partner Through the Postpartum Period",
     "category": "Relationships",
@@ -36,7 +36,7 @@
     "description": "The postpartum period reshapes every relationship in the household. Whether you're the birthing parent or the supporting partner, learning to communicate needs clearly and compassionately is essential.\n\nIn this lesson you'll explore:\n• Recognising signs your partner may be struggling\n• Active listening techniques for emotionally charged moments\n• Dividing responsibilities without keeping score\n• Creating a 'check-in' ritual that keeps you connected\n\nStrong partnerships aren't built on perfection — they're built on showing up, even imperfectly."
   },
   {
-    "id": "lesson-sleep-strategies",
+    "id": "sleep-hygiene",
     "slug": "sleep-when-sleep-is-scarce",
     "title": "Sleep When Sleep Is Scarce: Survival Strategies",
     "category": "Wellness",
@@ -48,7 +48,7 @@
     "description": "Sleep deprivation is one of the hardest parts of early parenthood, and it affects everything — mood, patience, decision-making, and physical health.\n\nThis lesson offers evidence-based strategies:\n• Sleep hygiene basics adapted for new-parent life\n• Power-nap techniques that actually restore energy\n• Managing nighttime wake-ups as a team\n• When fatigue crosses the line into a health concern\n\nYou can't pour from an empty cup. Let's find ways to refill yours."
   },
   {
-    "id": "lesson-bonding-with-baby",
+    "id": "bonding-activities",
     "slug": "bonding-with-your-newborn",
     "title": "Building Your Bond: Connection Activities for Every Day",
     "category": "Bonding",
@@ -58,5 +58,125 @@
     "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     "thumbnailUrl": "",
     "description": "Bonding with your baby doesn't always happen in a single magical moment. For many parents, it's a gradual process — and that's completely normal.\n\nThis lesson explores:\n• Skin-to-skin contact and why it matters beyond the first hour\n• Talking, singing, and reading to your newborn\n• Responsive caregiving: following your baby's cues\n• What to do if bonding feels difficult or delayed\n\nEvery gentle touch, every whispered word, every quiet moment together is building a bond that will last a lifetime."
+  },
+  {
+    "id": "grounding-techniques",
+    "slug": "grounding-techniques",
+    "title": "Grounding Techniques: Anchoring Yourself in the Present",
+    "category": "Mental Wellness",
+    "tags": ["grounding", "anxiety", "mindfulness", "coping"],
+    "duration": "05:00",
+    "readTime": "3 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    "thumbnailUrl": "",
+    "description": "When emotions feel overwhelming, grounding techniques can help you return to the present moment. These simple exercises work whether you're standing, sitting, or holding your baby.\n\nYou'll learn:\n• The 5-4-3-2-1 sensory grounding method\n• Body scan techniques you can do in under 2 minutes\n• How to use touch, temperature, and texture as anchors\n• Building a personal grounding toolkit for difficult moments\n\nYou don't need a quiet room or special equipment — just a willingness to pause and notice what's around you."
+  },
+  {
+    "id": "reach-out-for-support",
+    "slug": "reaching-out-for-support",
+    "title": "Reaching Out: How and When to Ask for Help",
+    "category": "Support",
+    "tags": ["support", "help", "community", "vulnerability"],
+    "duration": "04:00",
+    "readTime": "3 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
+    "thumbnailUrl": "",
+    "description": "Asking for help is not weakness — it is one of the bravest things a new parent can do. Yet many struggle with when, how, and whom to ask.\n\nThis lesson covers:\n• Recognising the signs that you need support\n• Scripts for asking family, friends, and professionals\n• Understanding what postpartum support services are available\n• Setting boundaries around the help you receive\n\nYou don't have to do this alone. And you shouldn't have to."
+  },
+  {
+    "id": "breathing-exercises",
+    "slug": "breathing-exercises",
+    "title": "Breathing Exercises: Calm Your Nervous System",
+    "category": "Wellness",
+    "tags": ["breathing", "calm", "nervous system", "relaxation"],
+    "duration": "05:00",
+    "readTime": "2 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "thumbnailUrl": "",
+    "description": "Your breath is the fastest tool you have to shift your nervous system from fight-or-flight to rest-and-digest. These guided patterns work even during a 3 AM feed.\n\nYou'll practise:\n• Box breathing (4-4-4-4) for immediate calm\n• Extended exhale technique for winding down\n• Rhythmic breathing synced with your baby\n• Emergency reset breathing for panic moments\n\nNo equipment needed. No special position required. Just you, breathing, one breath at a time."
+  },
+  {
+    "id": "mindful-moments",
+    "slug": "mindful-moments",
+    "title": "Mindful Moments: Presence for Busy Parents",
+    "category": "Mindfulness",
+    "tags": ["mindfulness", "presence", "meditation", "awareness"],
+    "duration": "05:00",
+    "readTime": "3 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/SubaruOutbackOnStreetAndDirt.mp4",
+    "thumbnailUrl": "",
+    "description": "Mindfulness doesn't require a meditation cushion or 30 minutes of silence. For new parents, it's about finding small windows of awareness throughout the day.\n\nThis lesson introduces:\n• 60-second mindfulness exercises for any moment\n• Mindful feeding: turning routine into connection\n• Noticing without judging your thoughts and feelings\n• Using daily tasks as mindfulness anchors\n\nEven 60 seconds of intentional presence can change the texture of your entire day."
+  },
+  {
+    "id": "journaling-prompts",
+    "slug": "journaling-prompts",
+    "title": "Journaling Prompts: Processing Your Feelings",
+    "category": "Self-Reflection",
+    "tags": ["journaling", "writing", "feelings", "processing"],
+    "duration": "05:00",
+    "readTime": "3 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "thumbnailUrl": "",
+    "description": "Writing — even just a sentence or two — can help you make sense of the whirlwind of new parenthood. You don't need to be a 'writer' to benefit.\n\nThis lesson offers:\n• Low-pressure journaling formats (lists, one-liners, voice notes)\n• Prompts designed for exhausted parents\n• How to use journaling to track mood patterns over time\n• The science behind expressive writing and emotional health\n\nYour journal is a judgement-free zone. Whatever comes out is exactly right."
+  },
+  {
+    "id": "positive-affirmations",
+    "slug": "positive-affirmations",
+    "title": "Positive Affirmations: Words That Carry You",
+    "category": "Emotional Wellness",
+    "tags": ["affirmations", "positivity", "self-talk", "encouragement"],
+    "duration": "03:00",
+    "readTime": "2 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/VolkswagenGTIReview.mp4",
+    "thumbnailUrl": "",
+    "description": "The words you say to yourself matter — especially in the vulnerable early weeks of parenthood. Affirmations aren't about pretending everything is fine; they're about reminding yourself of what's true.\n\nYou'll explore:\n• Crafting affirmations that feel authentic, not forced\n• Morning and evening affirmation practices\n• Using affirmations during difficult feeding or sleep moments\n• Building a personal deck of go-to phrases\n\nYou are enough. You are doing enough. And you deserve to hear that — from yourself."
+  },
+  {
+    "id": "building-routines",
+    "slug": "building-routines",
+    "title": "Building Routines: Gentle Rhythms for Your Family",
+    "category": "Daily Life",
+    "tags": ["routines", "schedules", "family", "organisation"],
+    "duration": "06:00",
+    "readTime": "4 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    "thumbnailUrl": "",
+    "description": "Rigid schedules often backfire with a newborn, but gentle rhythms can bring a sense of order to chaotic days.\n\nThis lesson helps you:\n• Distinguish between schedules and rhythms\n• Build a flexible morning and evening anchor routine\n• Adapt routines as your baby grows and changes\n• Handle days when nothing goes to plan (and that's okay)\n\nA good routine serves your family — not the other way around."
+  },
+  {
+    "id": "celebrate-small-wins",
+    "slug": "celebrate-small-wins",
+    "title": "Celebrate Small Wins: Honouring Everyday Victories",
+    "category": "Positivity",
+    "tags": ["wins", "celebration", "gratitude", "positivity"],
+    "duration": "03:00",
+    "readTime": "2 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4",
+    "thumbnailUrl": "",
+    "description": "In the intensity of new parenthood, it's easy to focus on what didn't go well. But every day holds small victories worth noticing.\n\nThis lesson encourages you to:\n• Redefine what 'winning' looks like in early parenthood\n• Build a daily wins ritual (even just one sentence)\n• Share wins with your partner or support network\n• Use wins as fuel for harder days\n\nYou got through today. That's not small — that's everything."
+  },
+  {
+    "id": "future-planning",
+    "slug": "future-planning",
+    "title": "Future Planning: Gentle Goals for What's Ahead",
+    "category": "Growth",
+    "tags": ["goals", "future", "planning", "hope"],
+    "duration": "05:00",
+    "readTime": "3 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "thumbnailUrl": "",
+    "description": "Looking ahead can feel daunting when you're deep in the newborn stage. But gentle, flexible goal-setting can spark hope and direction.\n\nYou'll learn:\n• How to set 'compass goals' instead of rigid targets\n• Weekly intention-setting that adapts to real life\n• Dreaming about your family's future without pressure\n• Balancing personal aspirations with parenting realities\n\nThe future doesn't have to be planned perfectly. It just has to feel possible."
+  },
+  {
+    "id": "gratitude-practice",
+    "slug": "gratitude-practice",
+    "title": "Gratitude Practice: Noticing the Good in Your Day",
+    "category": "Emotional Wellness",
+    "tags": ["gratitude", "thankfulness", "positivity", "reflection"],
+    "duration": "04:00",
+    "readTime": "2 min read",
+    "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "thumbnailUrl": "",
+    "description": "Gratitude isn't about ignoring the hard stuff — it's about making space to notice what's also true: the good, the tender, the unexpectedly sweet.\n\nThis guided exercise includes:\n• A 3-minute gratitude scan for any time of day\n• Gratitude anchors tied to daily routines\n• How gratitude rewires your brain over time\n• Partner and family gratitude practices\n\nEven on the hardest days, there is something small and warm worth noticing."
   }
 ]
