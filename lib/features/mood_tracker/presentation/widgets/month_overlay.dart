@@ -286,14 +286,16 @@ class _MonthOverlayContentState extends ConsumerState<_MonthOverlayContent> {
       );
     }
 
-    // Sort by count descending.
+    final total = counts.values.fold(0, (sum, v) => sum + v);
+
+    // Sort by score ascending (1→5) for consistent arc order.
     final sorted = counts.entries.toList()
-      ..sort((a, b) => b.value.compareTo(a.value));
+      ..sort((a, b) => a.key.compareTo(b.key));
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
         decoration: BoxDecoration(
           color: AppTheme.surfaceWhite,
           borderRadius: BorderRadius.circular(14),
@@ -301,37 +303,165 @@ class _MonthOverlayContentState extends ConsumerState<_MonthOverlayContent> {
             color: AppTheme.primaryLight.withAlpha(40),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: sorted.map((e) {
-            final idx = (e.key - 1).clamp(0, 4);
-            final emoji = AppConstants.moodEmojis[idx];
-            final label = AppConstants.moodLabels[idx];
-            return Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(emoji, style: const TextStyle(fontSize: 20)),
-                const SizedBox(height: 4),
-                Text(
-                  '${e.value}',
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700,
-                    color: AppTheme.textDark,
+        child: Column(
+          children: [
+            // ── Half-circle chart ──────────────────────────────
+            SizedBox(
+              width: 200,
+              height: 110,
+              child: CustomPaint(
+                painter: _HalfCirclePainter(
+                  segments: sorted
+                      .map((e) => _PieSegment(
+                            value: e.value.toDouble(),
+                            color: AppTheme
+                                .moodColors[(e.key - 1).clamp(0, 4)],
+                          ))
+                      .toList(),
+                  total: total.toDouble(),
+                ),
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Padding(
+                    padding: const EdgeInsets.only(bottom: 4),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '$total',
+                          style: const TextStyle(
+                            fontSize: 26,
+                            fontWeight: FontWeight.w700,
+                            color: AppTheme.textDark,
+                          ),
+                        ),
+                        Text(
+                          total == 1 ? 'day logged' : 'days logged',
+                          style: TextStyle(
+                            fontSize: 11,
+                            color: AppTheme.textMuted.withAlpha(160),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Text(
-                  label,
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: AppTheme.textMuted.withAlpha(180),
-                  ),
-                ),
-              ],
-            );
-          }).toList(),
+              ),
+            ),
+            const SizedBox(height: 14),
+
+            // ── Legend row ─────────────────────────────────────
+            Wrap(
+              spacing: 12,
+              runSpacing: 6,
+              alignment: WrapAlignment.center,
+              children: sorted.map((e) {
+                final idx = (e.key - 1).clamp(0, 4);
+                final emoji = AppConstants.moodEmojis[idx];
+                final label = AppConstants.moodLabels[idx];
+                final color = AppTheme.moodColors[idx];
+                return Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      width: 10,
+                      height: 10,
+                      decoration: BoxDecoration(
+                        color: color,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      '$emoji ${e.value}',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: AppTheme.textDark.withAlpha(200),
+                      ),
+                    ),
+                    const SizedBox(width: 2),
+                    Text(
+                      label,
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: AppTheme.textMuted.withAlpha(160),
+                      ),
+                    ),
+                  ],
+                );
+              }).toList(),
+            ),
+          ],
         ),
       ),
     );
+  }
+}
+
+// ── Half-Circle Pie Chart Painter ─────────────────────────────────
+
+class _PieSegment {
+  final double value;
+  final Color color;
+
+  const _PieSegment({required this.value, required this.color});
+}
+
+/// Custom painter that renders a semicircle pie chart (180° arc).
+///
+/// Each segment's sweep angle is proportional to its value relative
+/// to [total]. Arcs are drawn clockwise from the left (π) to the
+/// right (0) of the semicircle.
+class _HalfCirclePainter extends CustomPainter {
+  final List<_PieSegment> segments;
+  final double total;
+
+  _HalfCirclePainter({required this.segments, required this.total});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final center = Offset(size.width / 2, size.height);
+    final radius = size.width / 2 - 8;
+    const strokeWidth = 22.0;
+    const gapAngle = 0.03; // Small gap between segments.
+
+    final rect = Rect.fromCircle(center: center, radius: radius);
+
+    // Background track.
+    final bgPaint = Paint()
+      ..color = AppTheme.primaryLight.withAlpha(25)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = strokeWidth
+      ..strokeCap = StrokeCap.round;
+    canvas.drawArc(rect, 3.14159, 3.14159, false, bgPaint);
+
+    if (total <= 0) return;
+
+    // Draw segments from left (π) to right (2π).
+    double startAngle = 3.14159; // π — start at the left.
+    final totalArc = 3.14159; // π — half circle.
+
+    for (int i = 0; i < segments.length; i++) {
+      final segment = segments[i];
+      final sweepAngle =
+          (segment.value / total) * totalArc - (segments.length > 1 ? gapAngle : 0);
+
+      if (sweepAngle <= 0) continue;
+
+      final paint = Paint()
+        ..color = segment.color
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = strokeWidth
+        ..strokeCap = StrokeCap.round;
+
+      canvas.drawArc(rect, startAngle, sweepAngle, false, paint);
+      startAngle += sweepAngle + gapAngle;
+    }
+  }
+
+  @override
+  bool shouldRepaint(covariant _HalfCirclePainter oldDelegate) {
+    return oldDelegate.segments != segments || oldDelegate.total != total;
   }
 }
