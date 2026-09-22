@@ -13,7 +13,7 @@ class AppTheme {
   static const Color primaryLight = Color(0xFFB8AED8);
   static const Color accentPeach = Color(0xFFF4A896);
   static const Color accentRose = Color(0xFFE8828A);
-  static const Color surfaceWhite = Color(0xFFFAF8FF);
+  static const Color surfaceWhite = Color(0xFFF0F6FB);
   static const Color cardWhite = Color(0xFFFFFFFF);
   static const Color textDark = Color(0xFF2D2438);
   static const Color textMuted = Color(0xFF8E849B);
@@ -21,8 +21,8 @@ class AppTheme {
   static const Color errorRed = Color(0xFFD9534F);
 
   // Background gradient (top → bottom).
-  static const Color _bgTop = Color(0xFFF5F0FF);
-  static const Color _bgBottom = Color(0xFFFFF5F2);
+  static const Color _bgTop = Color(0xFFE3F0FA);
+  static const Color _bgBottom = Color(0xFFD6E9F8);
 
   /// Soft vertical gradient for page backgrounds.
   static const LinearGradient backgroundGradient = LinearGradient(
